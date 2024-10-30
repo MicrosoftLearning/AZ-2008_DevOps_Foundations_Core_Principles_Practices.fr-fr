@@ -26,7 +26,7 @@ Dans ce labo, vous allez :
 
 ## Exercice 1 : Implémenter et gérer des référentiels avec GitHub
 
-Dans cet exercice, vous allez dupliquer (fork) un dépôt Git et le gérer à l’aide de GitHub.
+Dans cet exercice, vous allez dupliquer (fork) un référentiel Git et le gérer à l’aide de GitHub.
 
 > **Important :** L’utilisation de la fonctionnalité GitHub Copilot pour demande de tirage est totalement facultative. Pour utiliser cette fonctionnalité, vous devez être membre d’une entreprise avec un **abonnement Copilot Enterprise**. Vous pouvez ignorer les étapes qui impliquent la fonctionnalité GitHub Copilot pour demande de tirage si vous n’y avez pas accès. Si vous souhaitez en savoir plus sur la fonctionnalité GitHub Copilot pour demande de tirage, consultez [À propos des résumés de demandes de tirage Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/github-copilot-enterprise/copilot-pull-request-summaries/about-copilot-pull-request-summaries).
 
@@ -77,8 +77,8 @@ L’exercice se compose des tâches suivantes :
 
 1. Dans la page du dépôt dupliqué **Spoon-Knife**, sélectionnez l’onglet **Problèmes**.
 1. Dans la page **Bienvenue dans la section des problèmes !**, sélectionnez **Nouveau problème**.
-1. Dans la zone de texte **Ajouter un titre**, entrez **index.html semble plutôt austère**.
-1. Dans la zone de texte **Ajouter une description**, entrez **le fichier index.html peut revêtir une touche moderne**.
+1. Dans la zone de texte **Ajouter un titre**, entrez **`index.html looks rather austere`**.
+1. Dans la zone de texte **Ajouter une description**, entrez **`index.html file can use a modern touch`**.
 1. Dans le volet actif, dans la section Destinataires, sélectionnez **Ajouter des destinataires…**, puis dans la section **Suggestions**, sélectionnez votre nom d’utilisateur GitHub.
 1. Sélectionnez l’icône d’engrenage à côté de l’entrée **Étiquettes**, puis dans la liste déroulante, sélectionnez **amélioration**.
 1. Sélectionnez l’icône d’engrenage à côté de l’entrée **Projets**, puis dans la liste déroulante, sélectionnez **Projet d’introduction DevOps Core**.
@@ -92,7 +92,7 @@ L’exercice se compose des tâches suivantes :
 
 1. Revenez à l’onglet **Code**.
 1. Dans le coin supérieur gauche de la page, sélectionnez l’entrée **principale** pour afficher la liste déroulante **Changer de branches/d’étiquettes**.
-1. Dans la zone de texte **Rechercher ou créer une branche...**, entrez **mettre à jour index.html**, puis sélectionnez **Créer une branche : mettre à jour index.html à partir de l’entrée « principale »** pour créer une branche.
+1. Dans la zone de texte **Rechercher ou créer une branche...**, entrez **`update index.html`**, puis sélectionnez **Créer une branche : mettre à jour index.html à partir de l’entrée « principale »** pour créer une branche.
 
    > **Remarque :** La branche nouvellement créée devient alors automatiquement la branche active, comme indiqué par le contenu de la liste déroulante.
 
@@ -113,7 +113,7 @@ L’exercice se compose des tâches suivantes :
    ```
 
 1. En haut à droite de la page de l’éditeur, sélectionnez **Commiter les modifications...**.
-1. Dans la fenêtre **Commiter les modifications**, dans la zone de texte **Description étendue**, entrez **Image et texte du paragraphe modifiés**, acceptez le message de commit par défaut, puis sélectionnez **Commiter les modifications**.
+1. Dans la fenêtre **Valider les modifications**, dans la zone de texte **Description étendue**, entrez **`Modified the image and paragraph text`**, acceptez le message de validation par défaut, puis sélectionnez **Valider les modifications**.
 
    > **Remarque :** À ce stade, vous avez également la possibilité de créer une branche pour le commit.
 
@@ -140,7 +140,7 @@ L’exercice se compose des tâches suivantes :
    ```
 
 1. En haut à droite de la page de l’éditeur, sélectionnez **Commiter les modifications...**.
-1. Dans la fenêtre **Commiter les modifications**, dans la zone de texte **Description étendue**, entrez **Étiquettes et sélecteurs CSS modifiés**, acceptez le message de commit par défaut, puis sélectionnez **Commiter les modifications** pour commiter les modifications de la branche update-index.html.
+1. Dans la fenêtre **Valider les modifications**, dans la zone de texte **Description étendue**, entrez **`Modified CSS tags and selectors`**, acceptez le message de validation par défaut, puis sélectionnez **Valider les modifications** pour valider les modifications dans la branche update-index.html.
 
 ### Tâche 6 : Créer et fusionner une demande de tirage
 
@@ -164,7 +164,7 @@ L’exercice se compose des tâches suivantes :
 
    1. Passez en revue le résumé généré par la fonctionnalité GitHub Copilot pour demande de tirage.
 
-   1. Une fois le résumé généré, entrez **Résolution n°1** dans **Ajouter une description** sur la première ligne, puis sélectionnez **Créer une demande de tirage**.
+   1. Une fois le résumé généré, entrez **`Addressing #1`** dans **Ajouter une description** sur la première ligne, puis sélectionnez **Créer une demande de tirage**.
 
        ![Résumé GitHub Copilot](media/github-pull-request-copilot-summary.png)
 
@@ -172,7 +172,7 @@ L’exercice se compose des tâches suivantes :
 
    > **Remarque :** Si vous choisissez d’utiliser la fonctionnalité GitHub Copilot pour demande de tirage, vous pouvez ignorer la prochaine étape.
 
-1. Dans la zone de texte **Ajouter une description**, entrez **Résolution n°1** et sélectionnez **Créer une demande de tirage**.
+1. Dans la zone de texte **Ajouter une description**, entrez **`Addressing #1`** et sélectionnez **Créer une demande de tirage**.
 
    > **Remarque :** En incluant **n°1**, vous pouvez référencer le premier problème associé à cette demande de tirage.
 

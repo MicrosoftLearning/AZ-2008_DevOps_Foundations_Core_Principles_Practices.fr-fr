@@ -27,7 +27,7 @@ Dans ce labo, vous allez :
 
 - [Labo 01 – Planification et gestion agiles avec GitHub](01-agile-planning-management-using-github.md) terminé
 - [Labo 02 – Implémenter le flux de travail avec GitHub](02-implement-manage-repositories-using-github.md) terminé
-- Un abonnement Azure pour lequel vous disposez au moins de l’accès au niveau contributeur. Si vous n’avez pas d’abonnement Azure, vous pouvez vous inscrire à un [essai gratuit](https://azure.microsoft.com/free).
+- Un abonnement Azure pour lequel vous disposez au moins de l’accès au niveau contributeur. Si vous n’en avez pas, vous pouvez demander un [essai gratuit](https://azure.microsoft.com/free).
 
 ## Exercice 0 : Préparer l’abonnement Azure pour le labo
 
@@ -37,7 +37,7 @@ Dans ce labo, vous allez :
 
 1. Démarrez un navigateur web et accédez au portail Azure à l’adresse `https://portal.azure.com`.
 1. Si vous y êtes invité, connectez-vous à l’aide de votre compte Microsoft Entra ID avec l’accès Propriétaire à l’abonnement Azure disponible.
-1. Sous l’onglet de navigateur web affichant le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **Abonnements**, puis, dans la liste des résultats, sélectionnez **Abonnements**.
+1. Sous l’onglet de navigateur web affichant le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **`Subscriptions`**, puis, dans la liste des résultats, sélectionnez **Abonnements**.
 1. Dans la page **Abonnements**, sélectionnez l’abonnement que vous souhaitez utiliser dans ce labo.
 1. Dans la page des abonnements, dans le menu vertical situé à gauche, sélectionnez **Fournisseurs de ressources**.
 1. Dans la liste des fournisseurs de ressources, recherchez et sélectionnez **Microsoft.CloudShell**.
@@ -73,7 +73,7 @@ L’exercice se compose des tâches suivantes :
    - Répertoire **infra** contenant le modèle Bicep nommé **webapp.bicep**
    - Répertoire **src/Web** contenant le code .NET de l’application web source
 
-1. Ouvrez le répertoire **.github/workflows**, puis sélectionnez le fichier **eshoponweb-cicd.yml** pour afficher son contenu. Notez que ce workflow GitHub Actions contient les travaux **buildandtest** et **deploy**, qui comprennent les étapes suivantes :
+1. Ouvrez le répertoire **.github/workflows**, puis sélectionnez le fichier **eshoponweb-cicd.yml** pour afficher son contenu. Notez que ce workflow GitHub Actions contient les travaux **buildandtest** et **deploy**, qui comprennent les étapes suivantes :
 
    - buildandtest
       - effectuer un basculement sur une branche du dépôt
@@ -105,13 +105,13 @@ L’exercice se compose des tâches suivantes :
 > **Remarque :** Vous allez commencer par créer les groupes de ressources. Vous exécuterez le workflow à deux reprises pour déployer deux instances du site web dans deux régions Azure différentes.
 
 1. Passez à l’onglet de navigateur web affichant le portail Azure à l’adresse `https://portal.azure.com`.
-1. Dans le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **Groupes de ressources**, puis sélectionnez **Groupes de ressources** dans la liste des résultats.
+1. Dans le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **`Resource groups`**, puis sélectionnez **Groupes de ressources** dans la liste des résultats.
 1. Dans la page **Groupes de ressources**, sélectionnez **+ Créer**.
-1. Dans la zone de texte **Groupes de ressources**, entrez **rg-eshoponweb-westeurope**.
+1. Dans la zone de texte **Groupes de ressources**, entrez **`rg-eshoponweb-westeurope`**.
 1. Dans la liste déroulante **Région**, sélectionnez **(Europe) Europe Ouest**.
 1. Sélectionnez **Vérifier + créer**, puis, dans **Vérifier + créer**, sélectionnez **Créer**.
 1. Dans la page **Groupes de ressources**, sélectionnez **+ Créer**.
-1. Dans la zone de texte **Groupes de ressources**, entrez **rg-eshoponweb-eastus**.
+1. Dans la zone de texte **Groupes de ressources**, entrez **`rg-eshoponweb-eastus`**.
 1. Dans la liste déroulante **Région**, sélectionnez **(US) USA Est**.
 1. Sélectionnez **Vérifier + créer**, puis, dans **Vérifier + créer**, sélectionnez **Créer**.
 
@@ -122,15 +122,15 @@ L’exercice se compose des tâches suivantes :
 1. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour stocker la valeur de votre ID d’abonnement Azure dans une variable :
 
    ```cli
-   SUBCRIPTION_ID=$(az account show --query id --output tsv) 
-   echo $SUBCRIPTION_ID
+   SUBSCRIPTION_ID=$(az account show --query id --output tsv) 
+   echo $SUBSCRIPTION_ID
    ```
 
 1. Copiez la valeur de l’ID d’abonnement retourné par la deuxième commande et enregistrez-la. Vous en aurez besoin plus loin dans cet exercice.
 1. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour créer un principal de service Microsoft Entra ID et lui attribuer le rôle de Contributeur dans l’étendue de l’abonnement :
 
    ```cli
-   az ad sp create-for-rbac --name "devopsfoundationslabsp" --role contributor --scopes /subscriptions/$SUBCRIPTION_ID --json-auth
+   az ad sp create-for-rbac --name "devopsfoundationslabsp" --role contributor --scopes /subscriptions/$SUBSCRIPTION_ID --json-auth
    ```
 
 1. Copiez l’intégralité de la sortie au format JSON de la commande et enregistrez-la. Vous en aurez besoin rapidement. Le format de la sortie doit ressembler au texte suivant :
@@ -153,22 +153,22 @@ L’exercice se compose des tâches suivantes :
 1. Passez à la fenêtre de navigateur web affichant la page du dépôt GitHub **eShopOnWeb** dupliqué, puis, dans la barre d’outils, sélectionnez **Settings** (Paramètres).
 1. Dans le menu vertical de gauche, dans la section **Security** (Sécurité), sélectionnez **Secrets and variables** (Secrets et variables), puis, dans la liste déroulante, sélectionnez **Actions**.
 1. Dans le volet **Actions secrets and variables** (Secrets et variables d’actions), sélectionnez **New repository secret** (Nouveau secret de dépôt).
-1. Dans le volet **Actions secrets / New secret** (Secrets d’actions / Nouveau secret), dans la zone de texte **Name** (Nom), entrez **AZURE_CREDENTIALS**.
+1. Dans le volet **Actions secrets / New secret** (Secrets d’actions / Nouveau secret), dans la zone de texte **Name** (Nom), entrez **`AZURE_CREDENTIALS`**.
 1. Dans la zone de texte **Secret**, collez le texte au format JSON que vous avez enregistré précédemment dans cette tâche et sélectionnez **Add secret** (Ajouter le secret).
-1. Revenez au navigateur web affichant la session Bash dans le volet Cloud Shell, puis exécutez la commande suivante pour générer le nom de la première application web App Service que vous allez déployer :
+1. Revenez au navigateur web affichant la session Bash dans le volet Cloud Shell, puis exécutez la commande suivante pour générer le nom de la première application web App Service que vous allez déployer :
 
    ```cli
    echo devops-webapp-westeurope-$RANDOM$RANDOM
    ```
 
-1. Copiez la valeur retournée par la commande et enregistrez-la. Vous en aurez besoin plus loin dans cet exercice.
-1. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour générer le nom de la deuxième application web App Service que vous allez déployer :
+1. Copiez la valeur retournée par la commande et enregistrez-la. Vous l’utiliserez plus loin dans cet exercice.
+1. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour générer le nom de la deuxième application web App Service que vous allez déployer :
 
    ```cli
    echo devops-webapp-eastus-$RANDOM$RANDOM
    ```
 
-1. Copiez la valeur retournée par la commande et enregistrez-la. Vous en aurez besoin plus loin dans cet exercice.
+1. Copiez la valeur retournée par la commande et enregistrez-la. Vous l’utiliserez plus loin dans cet exercice.
 
 ### Tâche 3 : Valider IaC et CI/CD sur le plan fonctionnel
 
@@ -245,7 +245,7 @@ L’exercice se compose des tâches suivantes :
 
     >**Remarque** : Si l’une des étapes échoue, dans le coin supérieur droit de la page qui affiche la progression du workflow, sélectionnez **Re-run all jobs** (Réexécuter tous les travaux), puis, dans le volet **Re-run all jobs**, sélectionnez **Re-run jobs** (Réexécuter les travaux).
 
-1. Dans la fenêtre de navigateur web affichant le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **App Services**, puis sélectionnez **App Services** dans la liste des résultats.
+1. Dans la fenêtre de navigateur web affichant le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **`App Services`**, puis sélectionnez **App Services** dans la liste des résultats.
 1. Dans la page **App Services**, dans la liste des services d’application, sélectionnez le service d’application **devops-webapp-westeurope-** créé précédemment dans cet exercice.
 1. Dans la page **devops-webapp-westeurope-**, dans la section **Essentials** (Informations de base), vérifiez que la valeur **Default domain** (Domaine par défaut) est affichée et sélectionnez-la pour ouvrir l’application web dans un nouvel onglet de navigateur.
 1. Sous le nouvel onglet de navigateur, vérifiez que l’application web est affichée et qu’elle est fonctionnelle. Vous pouvez également vérifier la deuxième application web dans la région **USA Est** de la même façon.

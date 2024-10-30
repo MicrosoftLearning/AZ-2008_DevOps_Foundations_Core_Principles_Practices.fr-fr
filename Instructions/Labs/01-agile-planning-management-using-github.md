@@ -42,7 +42,7 @@ L’exercice se compose des tâches suivantes :
 1. Dans la page **Créer un référentiel**, effectuez les actions suivantes :
 
    - Dans la liste déroulante **Propriétaire**, sélectionnez le nom d’utilisateur de votre compte GitHub.
-   - Dans la zone de texte **Nom de référentiel**, saisissez **DevOpsCoreIntroRepo**.
+   - Dans la zone **Nom du référentiel**, entrez **`DevOpsCoreIntroRepo`**.
    - Passez la visibilité du référentiel sur **Privé**.
    - Activez la case à cocher **Ajouter un fichier README**.
    - Dans la liste déroulante **Ajouter .gitignore**, sélectionnez **Visual Studio**.
@@ -63,17 +63,17 @@ L’exercice se compose des tâches suivantes :
 
 1. Dans la page **Problèmes**, à gauche du bouton **Nouveau problème**, sélectionnez **Jalons**.
 1. Dans la page **Jalons**, sélectionnez **Nouveau jalon**.
-1. Dans la page **Nouveau jalon**, effectuez les étapes suivantes :
+1. Dans la page **Nouveau jalon**, effectuez les actions suivantes :
 
-   - Dans la zone de texte **Titre**, saisissez **version alpha**.
+   - Dans la zone de texte **Titre**, entrez **`alpha release`**.
    - Dans la zone de texte **Date d’échéance (facultatif)**, indiquez la date correspondant à une semaine avant la date actuelle.
-   - Dans la zone de texte **Description**, saisissez **Fin de la version alpha**.
+   - Dans la zone de texte **Description**, entrez **`Completion of the alpha release`**.
 
 1. Sélectionnez **Créer un jalon**.
-1. Répétez les trois dernières étapes pour créer un jalon **version bêta** avec la date d’échéance correspondant à deux semaines avant la date actuelle. Dans la zone de texte **Description**, saisissez **Fin de la version bêta**.
+1. Répétez les trois dernières étapes pour créer un jalon **version bêta** avec la date d’échéance correspondant à deux semaines avant la date actuelle. Dans la zone de texte **Description**, entrez **`Completion of the beta release`**.
 1. Revenez à la page **Problèmes**, puis sélectionnez **Nouveau problème**.
-1. Dans la zone de texte **Ajouter un titre**, saisissez **La page README du référentiel est vide**.
-1. Dans la zone de texte **Ajouter une description**, saisissez **La concision est souvent valorisée, mais cette page README pourrait bénéficier de davantage de contenu**.
+1. Dans la zone de texte **Ajouter un titre**, entrez **`Repo README page is empty`**.
+1. Dans la zone de texte **Ajouter une description**, entrez **`Brevity might be a virtue, but this README page can really use some text`**.
 1. Sélectionnez l’icône d’engrenage à côté de l’entrée **Jalon**, puis dans la liste déroulante, choisissez **version alpha**.
 1. Sélectionnez l’icône d’engrenage à côté de l’entrée **Étiquettes**, puis dans la liste déroulante, choisissez **bogue**.
 1. Sélectionnez **Soumettre un nouveau problème**. Vous remarquerez que le problème a été automatiquement étiqueté **#1**.
@@ -87,8 +87,8 @@ L’exercice se compose des tâches suivantes :
    > **Remarque :** Vous avez également la possibilité de démarrer de zéro et de visualiser le projet sous forme de tableau, de liste ou de feuille de route.
 
 1. Dans la page du nouveau projet, sélectionnez le nom du projet généré automatiquement. Le panneau **Créer une image** s’affiche automatiquement.
-1. Dans la zone de texte **Nom du projet**, saisissez **Projet de présentation de DevOps Core**.
-1. Dans la zone de texte **Description courte**, saisissez **Présentation de GitHub Projects**, puis sélectionnez **Enregistrer**.
+1. Dans la zone de texte **Nom du projet**, entrez **`DevOps Core Intro Project`**.
+1. Dans la zone de texte **Description courte**, entrez **`Introduction to GitHub Projects`**, puis sélectionnez **Enregistrer**.
 1. Dans la section **README**, copiez le texte suivant.
 
    > **Remarque :** La section **README** comprend un éditeur Markdown simplifié, qui vous aide à créer une page README visuellement attrayante pour le projet. Vous pouvez utiliser les icônes de la barre d’outils pour mettre en forme le texte, puis accéder à l’onglet **Aperçu** pour examiner les modifications. Copiez et collez le texte suivant dans la section README de l’éditeur de texte :
@@ -125,12 +125,12 @@ L’exercice se compose des tâches suivantes :
    > **Remarque :** Cette mise en page représente un tableau kanban très simple. Dans chaque colonne, vous pouvez ajouter des éléments individuels. Vous pouvez également ajouter des colonnes supplémentaires.
 
 1. Pour ajouter une colonne supplémentaire, sélectionnez l’icône **+** à droite de la colonne **Terminé**, puis cliquez sur **+ Nouvelle colonne**.
-1. Dans la fenêtre **Nouvelle option**, accédez à la zone de texte **Étiquette**, saisissez **Vérification en cours**, puis choisissez une couleur à attribuer à la colonne. Dans la zone de texte **Description**, saisissez **Cet élément est en cours d’examen**, puis sélectionnez **Enregistrer**.
+1. Dans la fenêtre **Nouvelle option**, dans la zone de texte **Texte d’étiquette**, entrez **`Review In Progress`**, puis choisissez une couleur à attribuer à la colonne. Dans la zone de texte **Description**, entrez **`This item is being reviewed`**, puis sélectionnez **Enregistrer**.
 1. Sélectionnez le petit cercle à côté de l’étiquette **Vérification en cours** de la colonne nouvellement ajoutée pour la faire glisser entre les colonnes **En cours** et **Terminé**.
 
 ## Exercice 2 : Créer et gérer des éléments de tableau de projet
 
-Dans cet exercice, vous allez créer et gérer des éléments dans le tableau du projet.
+Dans cet exercice, vous allez créer et gérer des éléments dans le tableau de projet.
 
 > **Remarque :** Il existe deux façons principales d’ajouter des éléments à un tableau de projet. Vous pouvez créer un brouillon d’élément ou ajouter un élément représentant un problème existant dans un référentiel GitHub.
 
@@ -146,7 +146,7 @@ L’exercice se compose des tâches suivantes :
 
    > **Remarque :** Dans la zone de texte qui s’affiche automatiquement, vous pouvez commencer à saisir du texte pour créer un brouillon ou taper **#** pour référencer un problème existant dans l’un de vos référentiels GitHub. Nous allons commencer par aborder la première de ces deux techniques.
 
-1. Dans la zone de texte, saisissez **Wiki manquant**, puis appuyez sur la touche **Entrée** du clavier. Un nouveau brouillon est ajouté à la colonne **À faire**.
+1. Dans la zone de texte, saisissez **`Missing Wiki`**, puis appuyez sur la touche **Entrée** du clavier. Un nouveau brouillon est ajouté à la colonne **À faire**.
 1. Dans le nouveau brouillon, sélectionnez les points de suspension et, dans le menu déroulant, choisissez **Convertir en problème**.
 1. Dans la liste déroulante **Sélectionner un élément**, choisissez **DevOpsCoreIntroRepo** pour ajouter l’élément au référentiel que vous avez créé dans l’exercice précédent. Vous remarquerez que le problème a été automatiquement étiqueté **#2**.
 1. Sélectionnez le problème **Wiki manquant**.
@@ -158,7 +158,8 @@ L’exercice se compose des tâches suivantes :
    > **Remarque :** À présent, vous allez ajouter un autre brouillon et le convertir en problème.
 
 1. Dans la colonne **À faire** de la page **Projet de présentation de DevOps Core**, sélectionnez **+ Ajouter un élément**.
-1. Dans la zone de texte, saisissez **Collaborateurs supplémentaires nécessaires**, puis appuyez sur la touche **Entrée** du clavier. Un nouveau brouillon est ajouté à la colonne **À faire**.
+1. Dans la zone de texte, saisissez **`Additional collaborators needed`**, puis appuyez sur la touche **Entrée** du clavier. Un nouveau brouillon est ajouté à la colonne **À faire**.
+1. Dans le nouveau brouillon, sélectionnez les points de suspension et, dans le menu déroulant, choisissez **Convertir en problème**, puis sélectionnez **DevOpsCoreIntroRepo** pour ajouter l’élément au référentiel.
 
 ### Tâche 2 : Ajouter un élément en fonction d’un problème
 
@@ -199,7 +200,7 @@ L’exercice se compose des tâches suivantes :
 1. Remarquez que la fermeture de l’élément a entraîné les actions suivantes :
 
    - L’état de l’élément a été automatiquement modifié en **Terminé**, comme mentionné par un commentaire supplémentaire indiquant que le bot **github-project-automation** a déplacé l’élément de **En cours** vers **Terminé** dans **Projet de présentation de DevOps Core**.
-   - Le jalon **version alpha** a été marqué comme terminé, comme indiqué par la barre horizontale verte qui s’affiche dans la section **Jalon** de la page.
+   - Le jalon **version alpha** a été marqué comme terminé à 50 %, comme indiqué par la barre horizontale verte qui s’affiche dans la section **Jalon** de la page.
 
    > **Remarque :** Si vous ne voyez pas les modifications, actualisez la page.
 
