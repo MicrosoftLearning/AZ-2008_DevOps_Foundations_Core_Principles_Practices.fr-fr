@@ -27,7 +27,7 @@ Dans ce labo, vous allez :
 
 ## Prérequis
 
-- Terminé [Lab 01 - Planification et gestion agiles à l’aide de GitHub](01-agile-planning-management-using-github.md)
+- [Labo 01 – Planification et gestion agiles avec GitHub](01-agile-planning-management-using-github.md) terminé
 - Terminé [Lab 02 - Implémenter le flux de travail avec GitHub](02-implement-manage-repositories-using-github.md)
 - Terminé [Lab 03 - Implémenter CI/CD avec GitHub Actions et IaC avec Bicep](03-implement-ci-cd-with-github-actions-and-iac-with-bicep.md)
 - Un abonnement Azure auquel vous disposez de l’accès au niveau du propriétaire
@@ -40,7 +40,7 @@ Dans ce labo, vous allez :
 
 1. Démarrez un navigateur web et accédez au portail Azure à `https://portal.azure.com`.
 1. Si vous y êtes invité, connectez-vous à l’aide de votre compte Microsoft Entra ID avec l’accès propriétaire à l’abonnement Azure que vous avez utilisé dans le labo précédent.
-1. Dans l’onglet navigateur web affichant le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **Abonnements** et, dans la liste des résultats, sélectionnez **Abonnements**.
+1. Sous l’onglet de navigateur web affichant le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **`Subscriptions`**, puis, dans la liste des résultats, sélectionnez **Abonnements**.
 1. Dans la page abonnements, dans le menu vertical situé à gauche, sélectionnez **fournisseurs de ressources**.
 1. Dans la liste des fournisseurs de ressources, recherchez et sélectionnez **Microsoft.Chaos**.
 1. Une fois le fournisseur de ressources **Microsoft.Chaos** sélectionné, dans la barre d’outils, sélectionnez **Inscrire**.
@@ -49,7 +49,7 @@ Dans ce labo, vous allez :
 
 ## Exercice 1 : Améliorer la résilience des charges de travail à l’aide de Traffic Manager
 
-Dans cet exercice, vous allez implémenter une configuration résiliente qui distribue les requêtes entre les deux instances d’application web .NET dans deux régions Azure différentes à l’aide d’Azure Traffic Manager.
+Dans cet exercice, vous allez implémenter une configuration résiliente qui distribue les requêtes entre les deux instances d’application web .NET dans deux régions Azure différentes à l’aide d’Azure Traffic Manager.
 
 > **Remarque :** Dans le cadre de notre laboratoire, nous allons envisager le déploiement de . Application web basée sur NET eShopOnWeb dans la région USA Est en tant qu’instance principale. Bien que dans ce cas, cette considération soit purement arbitraire (et utilisée uniquement à des fins de démonstration), il peut y avoir des scénarios où il peut être utile de hiérarchiser l’un des points de terminaison.
 
@@ -60,11 +60,11 @@ L’exercice se compose des tâches suivantes :
 
 ### Tâche 1 : Implémenter un profil Traffic Manager
 
-1. Dans l’onglet navigateur web affichant le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **profils Traffic Manager** et, dans la liste des résultats, sélectionnez **profils Traffic Manager**.
+1. Sous l’onglet de navigateur web affichant le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **`Traffic Manager profiles`**, puis, dans la liste des résultats, sélectionnez **Profils Traffic Manager**.
 1. Sur la page **Load balancing\| Traffic Manager**, sélectionnez **+ Create**.
-1. Dans la page **Créer un profil Traffic Manager**, effectuez les actions suivantes :
+1. Sur la page **Créer un profil Traffic Manager**, effectuez les actions suivantes :
 
-   - Dans la zone de texte **Nom**, entrez **devopsfoundationstmprofile**.
+   - Dans la zone de texte **Nom**, entrez **`devopsfoundationstmprofile`**.
 
        > **Remarque :** Le nom du profil Traffic Manager doit être globalement unique. Si vous recevez un message d’erreur indiquant que le nom est déjà utilisé, essayez un autre nom et veillez à l’enregistrer. Vous en aurez besoin tout au long de ce labo.
 
@@ -73,7 +73,7 @@ L’exercice se compose des tâches suivantes :
    > **Remarque :** Nous choisissons la méthode de routage prioritaire pour refléter l’hypothèse quelque peu arbitraire selon laquelle toutes les requêtes doivent être gérées par l’application web Azure App Service dans la région USA Est.
 
    - Vérifiez que votre abonnement Azure apparaît dans la liste déroulante **Abonnement**
-   - Sélectionnez le lien **Créer un nouveau** sous la liste déroulante **groupe de ressources**, dans la zone de texte **Nom**, entrez **devops-foundations-rg**, puis sélectionnez **OK**.
+   - Sélectionnez le lien **Créer nouveau** sous la liste déroulante **Groupe de ressources**, dans la zone de texte **Nom**, entrez **`rg-devops-foundations`**, puis sélectionnez **OK**.
    - Dans la liste déroulante **emplacement du groupe de ressources**, sélectionnez la même région Azure que celle que vous avez choisie dans les laboratoires précédents de ce cours.
 
 1. Sélectionnez **Créer** pour démarrer le processus d’approvisionnement.
@@ -102,7 +102,7 @@ L’exercice se compose des tâches suivantes :
 1. Dans le volet **Ajouter un point de terminaison**, effectuez les actions suivantes :
 
    - Vérifiez que **point de terminaison Azure** apparaît dans la liste déroulante **Type**.
-   - Dans la zone de texte **Nom**, entrez **application web DevOps Foundations - USA Est**.
+   - Dans la zone de texte **Nom**, entrez **`DevOps Foundations web app - East US`**.
    - Vérifiez que la case **Activer le point de terminaison** est cochée.
    - Dans la liste déroulante **type de ressource cible**, sélectionnez **App Service**.
    - Dans la liste déroulante **ressource cible**, dans la section **rg-eshoponweb-eastus**, sélectionnez le nom de l’application web App Service dans la région Azure USA Est.
@@ -121,7 +121,7 @@ L’exercice se compose des tâches suivantes :
 1. Dans le volet **Ajouter un point de terminaison**, effectuez les actions suivantes :
 
    - Vérifiez que **point de terminaison Azure** apparaît dans la liste déroulante **Type**.
-   - Dans la zone de texte **Nom**, entrez **application web DevOps Foundations - Europe Ouest**.
+   - Dans la zone de texte **Nom**, entrez **`DevOps Foundations web app - West Europe`**.
    - Vérifiez que la case **Activer le point de terminaison** est cochée.
    - Dans la liste déroulante **type de ressource cible**, sélectionnez **App Service**.
    - Dans la liste déroulante **ressource cible**, dans la section **rg-eshoponweb-westeurope**, sélectionnez le nom de l’application web App Service dans la région Azure Europe Ouest.
@@ -151,7 +151,7 @@ L’exercice se compose des tâches suivantes :
 
 ## Exercice 2 : Tester la résilience des charges de travail à l’aide d’Azure Chaos Studio
 
-Dans cet exercice, vous allez tester la résilience des charges de travail à l’aide d’Azure Chaos Studio.
+Dans cet exercice, vous allez tester la résilience des charges de travail à l’aide d’Azure Chaos Studio.
 
 > **Remarque :** Cet exercice illustre l’utilisation d’Azure Chaos Studio. L’objectif d’Azure Chaos Studio est de faciliter la mesure, la compréhension et la création de la résilience des applications et des services. Cela s’effectue en perturbant intentionnellement les charges de travail afin d’identifier les lacunes de résilience et d’implémenter l’atténuation correspondante de manière proactive plutôt que réactive.
 
@@ -163,7 +163,7 @@ L’exercice se compose des tâches suivantes :
 
 ### Tâche 1 : Configurer l’environnement Azure Chaos Studio
 
-1. Dans l’onglet navigateur web affichant le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **Chaos Studio** et, dans la liste des résultats, sélectionnez **Chaos Studio**.
+1. Dans l’onglet navigateur web affichant le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **`Chaos Studio`** et, dans la liste des résultats, sélectionnez **Chaos Studio**.
 1. Dans la page **Chaos Studio**, sélectionnez **Cibles**.
 1. Dans la page **Chaos Studio\| Targets**, sélectionnez l’instance d’application web Azure App Service dans le groupe de ressources **rg-eshoponweb-eastus** dans la région USA Est que vous avez déployée dans le labo précédent.
 1. Dans la barre d’outils, sélectionnez le **Activer les cibles** en-tête de liste déroulante et, dans la liste déroulante, sélectionnez **Activer les cibles directes de service (toutes les ressources)**.
@@ -173,24 +173,24 @@ L’exercice se compose des tâches suivantes :
 
 ### Tâche 2 : Implémenter une expérience
 
-1. Dans le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **Chaos Studio** et, dans la liste des résultats, sélectionnez **Chaos Studio**.
+1. Dans le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **`Chaos Studio`** et, dans la liste des résultats, sélectionnez **Chaos Studio**.
 1. Dans la page **Chaos Studio**, sélectionnez **Expériences**.
 1. Dans la page **expériences**, sélectionnez **+ Créer**, puis, dans la liste déroulante, sélectionnez **Nouvelle expérience**.
 1. Sous l’onglet **Informations de base** de la page **Créer une expérience**, effectuez les actions suivantes :
 
    - Vérifiez que votre abonnement Azure apparaît dans la liste déroulante **abonnement**.
-   - Sélectionnez le lien **Créer un nouveau** sous la liste déroulante **groupe de ressources**, dans la zone de texte **Nom**, entrez **devops-foundations-rg**, puis sélectionnez **OK**.
-   - Dans la section **Détails de l’expérience**, dans la zone de texte **Nom**, entrez **DevOps_Foundations_Labs_Experiment_01**.
+   - Sélectionnez le lien **Créer nouveau** sous la liste déroulante **Groupe de ressources**, dans la zone de texte **Nom**, entrez **`rg-devops-foundations`**, puis sélectionnez **OK**.
+   - Dans la section **Détails de l’expérience**, dans la zone de texte **Nom**, entrez **`DevOps_Foundations_Labs_Experiment_01`**.
    - Dans la liste déroulante **Région**, sélectionnez la région **Europe Ouest** Région Azure.
 
    > **Remarque :** Vous pouvez éventuellement choisir n’importe quelle région Azure, mais compte tenu du fait que vous testez des échecs dans une ressource dans la région Europe Ouest, n’importe quelle région autre que USA Est semble plus appropriée.
 
 1. Sous l’onglet **Informations de base** de la page **Créer une expérience**, sélectionnez **Suivant : Autorisations >**.
-1. Sous l’onglet **Autorisations**, acceptez l’option par défaut **identité affectée par le système**, puis sélectionnez **Suivant : Concepteur d’expériences >**.
-1. Sous l’onglet **Concepteur d’expériences**, effectuez les actions suivantes :
+1. Sous l’onglet **Autorisations**, acceptez l’option par défaut **identité affectée par le système**, puis sélectionnez **Suivant : Concepteur d’expériences >**.
+1. Sous l’onglet **Concepteur d’expériences**, effectuez les actions suivantes :
 
-   - Dans la zone de texte **étape**, entrez **étape 1 : Basculement d’une application web App Service**.
-   - Dans la zone de texte **branche**, entrez **Branche 1 : Émuler un échec App Service**.
+   - Dans la zone de texte **Étape**, entrez **`Step 1: Failover an App Service web app`**.
+   - Dans la zone de texte **Branche**, entrez **`Branch 1: Emulate an App Service failure`**.
    - Sélectionnez **+ Ajouter une action** et, dans la liste déroulante, sélectionnez **Ajouter une erreur**.
 
 1. Sous l’onglet **Détails** de l’erreur du **volet Ajouter une erreur** , dans la **liste déroulante Erreurs** , sélectionnez **Arrêter App Service** et définissez la valeur Durée **(minutes)** sur 10.
@@ -203,7 +203,7 @@ L’exercice se compose des tâches suivantes :
 
    > **Remarque :** Pour que l’expérience réussisse, vous devez également accorder les autorisations de compte de service managé nouvellement créés suffisantes pour arrêter l’application Web Azure App Service. Nous allons tirer parti à cet effet du rôle contributeur Azure intégré, mais vous pouvez créer un rôle personnalisé si vous souhaitez suivre le principe du privilège minimum.
 
-1. Dans le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **App Services** et sélectionnez **App Services** dans la liste des résultats.
+1. Dans le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **`App Services`** et sélectionnez **App Services** dans la liste des résultats.
 1. Dans la page ** App Services**, sélectionnez l’application Web Azure App Service dans la région USA Est que vous avez déployée dans le labo précédent.
 1. Dans la page de l’application web, dans le menu vertical situé à gauche, sélectionnez **contrôle d’accès (IAM)**.
 1. Dans la page **contrôle d’accès (IAM)** de l’application web, sélectionnez **+ Ajouter** et, dans la liste déroulante, sélectionnez **Ajouter une attribution de rôle**.
@@ -249,7 +249,7 @@ L’exercice se compose des tâches suivantes :
 
 Dans cet exercice, vous allez supprimer les ressources utilisées dans les labos.
 
-1. Dans l’onglet navigateur web affichant le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **groupes de ressources** et, dans la liste des résultats, sélectionnez **groupes de ressources**.
+1. Dans l’onglet navigateur web affichant le portail Azure, dans la zone de texte de recherche en haut de la page, entrez **`Resource groups`** et, dans la liste des résultats, sélectionnez **Groupes de ressources**.
 1. Dans la page **Groupes de ressources**, dans la liste des groupes de ressources, sélectionnez le groupe de ressources que vous avez créé dans le labo actuel.
 1. Sur la page Groupe de ressources, sélectionnez **Supprimer un groupe de ressources**.
 1. Dans la zone de texte **Entrez le nom du groupe de ressources pour confirmer la suppression**, entrez le nom du groupe de ressources que vous êtes sur le point de supprimer, puis sélectionnez **Supprimer**.
