@@ -61,7 +61,7 @@ L’exercice se compose des tâches suivantes :
 ### Tâche 1 : Implémenter un profil Traffic Manager
 
 1. Sous l’onglet de navigateur web affichant le portail Azure, dans la zone de texte de recherche située en haut de la page, entrez **`Traffic Manager profiles`**, puis, dans la liste des résultats, sélectionnez **Profils Traffic Manager**.
-1. Sur la page **Load balancing\| Traffic Manager**, sélectionnez **+ Create**.
+1. Sur la page **Services d’équilibrage de charge \| Traffic Manager**, sélectionnez **+ Créer**.
 1. Sur la page **Créer un profil Traffic Manager**, effectuez les actions suivantes :
 
    - Dans la zone de texte **Nom**, entrez **`devopsfoundationstmprofile`**.
@@ -80,7 +80,7 @@ L’exercice se compose des tâches suivantes :
 
    > **Remarque** : Attendez la fin du déploiement. Cela doit se terminer dans un délai d’une minute.
 
-1. Sur la page **Load balancing\| Traffic Manager**, si nécessaire, sélectionnez **Refresh** puis **devopsfoundationstmprofile**.
+1. Sur la page **Services d’équilibrage de charge \| Traffic Manager**, si nécessaire, sélectionnez **Actualiser**, puis **devopsfoundationstmprofile**.
 1. Dans la page **devopsfoundationstmprofile**, dans la section **Essentials**, copiez la valeur du paramètre **nom DNS** et enregistrez-le. Vous en aurez besoin tout au long de ce labo.
 1. Dans la **page devopsfoundationstmprofile** , dans le menu de navigation de gauche, dans la **section Paramètres** , sélectionnez **Configuration**.
 1. Examinez le contenu de la page de **configuration\| de devopsfoundationstmprofile**. Notez que, par défaut, **durée de vie DNS (TTL)** est définie sur **60** secondes. Remplacez la valeur par **5** secondes.
