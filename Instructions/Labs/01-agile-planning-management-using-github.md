@@ -69,14 +69,14 @@ L’exercice se compose des tâches suivantes :
    - Dans la zone de texte **Date d’échéance (facultatif)**, indiquez la date correspondant à une semaine avant la date actuelle.
    - Dans la zone de texte **Description**, entrez **`Completion of the alpha release`**.
 
-1. Sélectionnez **Créer un jalon**.
+1. Sélectionnez **Nouvelle étape**.
 1. Répétez les trois dernières étapes pour créer un jalon **version bêta** avec la date d’échéance correspondant à deux semaines avant la date actuelle. Dans la zone de texte **Description**, entrez **`Completion of the beta release`**.
 1. Revenez à la page **Problèmes**, puis sélectionnez **Nouveau problème**.
 1. Dans la zone de texte **Ajouter un titre**, entrez **`Repo README page is empty`**.
 1. Dans la zone de texte **Ajouter une description**, entrez **`Brevity might be a virtue, but this README page can really use some text`**.
 1. Sélectionnez l’icône d’engrenage à côté de l’entrée **Jalon**, puis dans la liste déroulante, choisissez **version alpha**.
 1. Sélectionnez l’icône d’engrenage à côté de l’entrée **Étiquettes**, puis dans la liste déroulante, choisissez **bogue**.
-1. Sélectionnez **Soumettre un nouveau problème**. Vous remarquerez que le problème a été automatiquement étiqueté **#1**.
+1. Sélectionnez **Créer**. Vous remarquerez que le problème a été automatiquement étiqueté **#1**.
 
 ### Tâche 3 : Créer un projet GitHub
 
