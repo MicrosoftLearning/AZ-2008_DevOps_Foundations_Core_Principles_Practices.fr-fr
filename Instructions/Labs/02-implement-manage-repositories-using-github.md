@@ -82,7 +82,8 @@ L’exercice se compose des tâches suivantes :
 1. Dans le volet actif, dans la section Destinataires, sélectionnez **Ajouter des destinataires…**, puis dans la section **Suggestions**, sélectionnez votre nom d’utilisateur GitHub.
 1. Sélectionnez l’icône d’engrenage à côté de l’entrée **Étiquettes**, puis dans la liste déroulante, sélectionnez **amélioration**.
 1. Sélectionnez l’icône d’engrenage à côté de l’entrée **Projets**, puis dans la liste déroulante, sélectionnez **Projet d’introduction DevOps Core**.
-1. Sélectionnez **Soumettre un nouveau problème**.
+1. Sélectionnez **Créer** pour enregistrer le nouveau problème.
+1. Ouvrir à nouveau le nouveau problème
 1. Dans le volet **index.html semble plutôt austère**, dans la section **Projets**, définissez **État** sur **En cours**.
 1. Dans la page du dépôt dupliqué **Spoon-Knife**, sélectionnez l’onglet **Projets**.
 1. Dans la page **Bienvenue dans les tout nouveaux projets**, sélectionnez **Projet d’introduction DevOps Core**.

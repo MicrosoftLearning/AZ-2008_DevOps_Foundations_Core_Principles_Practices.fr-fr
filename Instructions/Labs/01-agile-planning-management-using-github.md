@@ -146,7 +146,7 @@ L’exercice se compose des tâches suivantes :
 
    > **Remarque :** Dans la zone de texte qui s’affiche automatiquement, vous pouvez commencer à saisir du texte pour créer un brouillon ou taper **#** pour référencer un problème existant dans l’un de vos référentiels GitHub. Nous allons commencer par aborder la première de ces deux techniques.
 
-1. Dans la zone de texte, saisissez **`Missing Wiki`**, puis appuyez sur la touche **Entrée** du clavier. Un nouveau brouillon est ajouté à la colonne **À faire**.
+1. Dans la zone de texte, saisissez **`Missing Wiki`**, puis appuyer sur **Ctrl + Entrée** sur le clavier Un nouveau brouillon est ajouté à la colonne **À faire**.
 1. Dans le nouveau brouillon, sélectionnez les points de suspension et, dans le menu déroulant, choisissez **Convertir en problème**.
 1. Dans la liste déroulante **Sélectionner un élément**, choisissez **DevOpsCoreIntroRepo** pour ajouter l’élément au référentiel que vous avez créé dans l’exercice précédent. Vous remarquerez que le problème a été automatiquement étiqueté **#2**.
 1. Sélectionnez le problème **Wiki manquant**.
@@ -174,7 +174,7 @@ L’exercice se compose des tâches suivantes :
 
 1. Dans la page **Projet de présentation de DevOps Core**, sélectionnez les points de suspension situés juste sous l’avatar.
 1. Dans la liste déroulante, sélectionnez **Workflows**.
-1. Dans la page **Workflows**, dans le menu de gauche, examinez la liste des workflows par défaut. '
+1. Dans la page **Workflows**, dans le menu de gauche, examinez la liste des workflows par défaut. ’
 
    > **Remarque :** Par défaut, les workflows **Élément fermé** et **Demande de tirage (pull request) fusionnée** sont activés.
 
