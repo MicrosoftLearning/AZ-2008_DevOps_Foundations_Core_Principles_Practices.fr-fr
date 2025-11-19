@@ -1,10 +1,7 @@
-#README
+> ⚠️ **Remarque**  
+> Ce référentiel sera **archivé le 14 novembre 2025**.  
+> Le nouveau référentiel pour les labos DevOps est disponible ici : [MicrosoftLearning/mslearn-devops](https://github.com/MicrosoftLearning/mslearn-devops)
 
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
 
 # AZ-2008 : Fondements de DevOps : Pratiques et principes clés
 
